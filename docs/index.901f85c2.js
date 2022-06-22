@@ -587,7 +587,7 @@ class Game {
 }
 new Game;
 
-},{"pixi.js":"dsYej","./assets":"jyCU7","./enemy":"e8Rej","./hero":"jMGFP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./background":"6FKGH"}],"dsYej":[function(require,module,exports) {
+},{"pixi.js":"dsYej","./assets":"jyCU7","./enemy":"e8Rej","./background":"6FKGH","./hero":"jMGFP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dsYej":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "utils", ()=>_utils
@@ -37210,6 +37210,21 @@ class Enemy extends _pixiJs.AnimatedSprite {
     }
 }
 
+},{"pixi.js":"dsYej","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6FKGH":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Background", ()=>Background
+);
+var _pixiJs = require("pixi.js");
+class Background extends _pixiJs.Sprite {
+    constructor(texture, x, y){
+        super(texture);
+        console.log("i'm the background");
+        this.width = x;
+        this.height = y;
+    }
+}
+
 },{"pixi.js":"dsYej","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jMGFP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -37231,21 +37246,6 @@ class Hero extends _pixiJs.AnimatedSprite {
         this.play();
         //voeg de enemy aan het beeld toe
         this.game.pixi.stage.addChild(this);
-    }
-}
-
-},{"pixi.js":"dsYej","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6FKGH":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Background", ()=>Background
-);
-var _pixiJs = require("pixi.js");
-class Background extends _pixiJs.Sprite {
-    constructor(texture, x, y){
-        super(texture);
-        console.log("i'm the background");
-        this.width = x;
-        this.height = y;
     }
 }
 
